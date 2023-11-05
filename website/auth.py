@@ -24,7 +24,7 @@ def login():
                 flash('Password incorrect', category='error')
         else:
             flash('Email does not exist', category='error')
-    return render_template('login.html', boolean=True, user=current_user)
+    return render_template('login.html', user=current_user)
 
 @auth.route('/logout')
 @login_required
